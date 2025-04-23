@@ -9,7 +9,7 @@
 ├── crawl_data.py          # File script chính để crawl dữ liệu
 ├── co_vat_url.txt        # Danh sách URL của các cổ vật
 ├── di_tich_chien_tranh.txt   # Danh sách URL của các di tích chiến tranh  
-└── html_out_real/        # Thư mục chứa các file HTML đã được crawl
+└── html_out/        # Thư mục chứa các file HTML đã được crawl
 ```
 
 ## Yêu cầu cài đặt
@@ -17,15 +17,33 @@
 Để chạy script crawl data, bạn cần:
 
 1. Python 3.6 trở lên
-2. Các thư viện Python:
-   - requests
-   - beautifulsoup4
-   - html5lib
+2. Các thư viện Python cần thiết đã được định nghĩa trong file `environment.yml`:
+   - playwright
+   - asyncio
+   - urllib3
+   - pathlib
+   và các thư viện chuẩn của Python (re, html, hashlib, sys, datetime)
 
-Cài đặt các thư viện bằng pip:
+Các bước cài đặt:
 
+1. Tạo môi trường mới và cài đặt các thư viện:
 ```bash
-pip install requests beautifulsoup4 html5lib
+conda env create -f environment.yml
+```
+
+2. Kích hoạt môi trường:
+```bash
+conda activate crawl_data_env
+```
+
+3. Cài đặt trình duyệt cho playwright:
+```bash
+playwright install
+```
+
+Để xuất danh sách thư viện đang sử dụng (nếu có cập nhật):
+```bash
+conda env export > environment.yml
 ```
 
 ## Cách sử dụng

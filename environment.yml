@@ -1,0 +1,13 @@
+name: crawl_data_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - playwright
+  - asyncio
+  - urllib3
+  - pathlib
+  - pip
+  - pip:
+    - playwright[async]
