@@ -9,7 +9,7 @@
 ├── crawl_data.py          # File script chính để crawl dữ liệu
 ├── co_vat_url.txt        # Danh sách URL của các cổ vật
 ├── di_tich_chien_tranh.txt   # Danh sách URL của các di tích chiến tranh  
-└── html_out_real/        # Thư mục chứa các file HTML đã được crawl
+└── html_out/        # Thư mục chứa các file HTML đã được crawl
 ```
 
 ## Yêu cầu cài đặt
